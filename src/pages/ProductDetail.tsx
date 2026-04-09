@@ -18,8 +18,10 @@ const ProductDetail = () => {
   const [added, setAdded] = useState(false);
 
   if (!product) {
-    return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
+  return (
+    <div className="min-h-screen bg-background">
+      <Navbar />
+      <div className="flex items-center justify-center min-h-screen pt-20">
         <div className="text-center">
           <h1 className="font-heading text-4xl text-primary mb-4">Product Not Found</h1>
           <button
