@@ -18,18 +18,19 @@ const ProductDetail = () => {
   const [added, setAdded] = useState(false);
 
   if (!product) {
-  return (
-    <div className="min-h-screen bg-background">
-      <Navbar />
-      <div className="flex items-center justify-center min-h-screen pt-20">
-        <div className="text-center">
-          <h1 className="font-heading text-4xl text-primary mb-4">Product Not Found</h1>
-          <button
-            onClick={() => navigate("/")}
-            className="text-sm tracking-widest uppercase text-muted-foreground hover:text-primary transition-colors"
-          >
-            ← Back to Shop
-          </button>
+    return (
+      <div className="min-h-screen bg-background">
+        <Navbar />
+        <div className="flex items-center justify-center min-h-screen pt-20">
+          <div className="text-center">
+            <h1 className="font-heading text-4xl text-primary mb-4">Product Not Found</h1>
+            <button
+              onClick={() => navigate("/")}
+              className="text-sm tracking-widest uppercase text-muted-foreground hover:text-primary transition-colors"
+            >
+              ← Back to Shop
+            </button>
+          </div>
         </div>
       </div>
     );
