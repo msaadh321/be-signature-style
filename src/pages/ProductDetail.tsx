@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ArrowLeft, Minus, Plus, ShoppingBag, Check } from "lucide-react";
 import { getProductById } from "@/data/products";
 import { useCart } from "@/context/CartContext";
+import Navbar from "@/components/Navbar";
 
 const ProductDetail = () => {
   const { id } = useParams<{ id: string }>();
