@@ -52,7 +52,9 @@ const ProductDetail = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background pt-20">
+    <div className="min-h-screen bg-background">
+      <Navbar />
+      <div className="pt-20">
       {/* Back button */}
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 py-6">
         <button
