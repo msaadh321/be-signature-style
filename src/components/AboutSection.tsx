@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import saadPortrait from "@/assets/saad-portrait.jpg";
+import saadPortrait from "@/assets/saad-portrait.webp";
 
 const AboutSection = () => {
   return (
