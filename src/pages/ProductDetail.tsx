@@ -218,6 +218,7 @@ const ProductDetail = () => {
           </motion.div>
         </div>
       </div>
+      </div>
     </div>
   );
 };
