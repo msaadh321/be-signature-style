@@ -1,14 +1,16 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import CartDrawer from "@/components/CartDrawer";
 
 const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "Shop", href: "#shop" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "About", href: "#about" },
-  { label: "Limited Drops", href: "#drops" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/#home" },
+  { label: "Shop", href: "/#shop" },
+  { label: "Gallery", href: "/#gallery" },
+  { label: "About", href: "/#about" },
+  { label: "Limited Drops", href: "/#drops" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 const Navbar = () => {
@@ -17,9 +19,9 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-        <a href="#home" className="font-heading text-2xl font-bold tracking-[0.3em] text-primary">
+        <Link to="/" className="font-heading text-2xl font-bold tracking-[0.3em] text-primary">
           BE
-        </a>
+        </Link>
 
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
@@ -31,14 +33,15 @@ const Navbar = () => {
               {link.label}
             </a>
           ))}
+          <CartDrawer />
         </div>
 
-        <button
-          onClick={() => setOpen(!open)}
-          className="md:hidden text-primary"
-        >
-          {open ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="flex items-center gap-4 md:hidden">
+          <CartDrawer />
+          <button onClick={() => setOpen(!open)} className="text-primary">
+            {open ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       <AnimatePresence>
