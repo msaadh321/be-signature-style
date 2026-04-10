@@ -9,7 +9,7 @@ const navLinks = [
   { label: "Shop", href: "/#shop" },
   { label: "Gallery", href: "/#gallery" },
   { label: "About", href: "/#about" },
-  { label: "Limited Drops", href: "/#drops" },
+  { label: "Drops", href: "/#drops" },
   { label: "Contact", href: "/#contact" },
 ];
 
@@ -17,10 +17,10 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 glass">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-        <Link to="/" className="font-heading text-2xl font-bold tracking-[0.3em] text-primary">
-          BE
+        <Link to="/" className="font-heading text-xl font-bold tracking-[0.35em] text-primary">
+          JH
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
@@ -28,7 +28,7 @@ const Navbar = () => {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm tracking-widest uppercase text-muted-foreground hover:text-primary transition-colors duration-300"
+              className="text-[11px] tracking-[0.25em] uppercase text-muted-foreground hover:text-primary transition-colors duration-300"
             >
               {link.label}
             </a>
@@ -39,7 +39,7 @@ const Navbar = () => {
         <div className="flex items-center gap-4 md:hidden">
           <CartDrawer />
           <button onClick={() => setOpen(!open)} className="text-primary">
-            {open ? <X size={24} /> : <Menu size={24} />}
+            {open ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
       </div>
@@ -50,7 +50,7 @@ const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-background border-b border-border overflow-hidden"
+            className="md:hidden bg-card border-b border-border overflow-hidden"
           >
             <div className="flex flex-col px-6 py-4 gap-4">
               {navLinks.map((link) => (
@@ -58,7 +58,7 @@ const Navbar = () => {
                   key={link.href}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="text-sm tracking-widest uppercase text-muted-foreground hover:text-primary transition-colors"
+                  className="text-[11px] tracking-[0.25em] uppercase text-muted-foreground hover:text-primary transition-colors"
                 >
                   {link.label}
                 </a>

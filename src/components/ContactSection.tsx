@@ -3,22 +3,23 @@ import { Instagram, Twitter, Mail } from "lucide-react";
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="section-padding bg-secondary">
-      <div className="max-w-7xl mx-auto text-center">
+    <section id="contact" className="section-padding bg-card">
+      <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          className="text-center max-w-lg mx-auto"
         >
-          <p className="text-sm tracking-[0.5em] uppercase text-accent mb-3">Connect</p>
-          <h2 className="font-heading text-4xl md:text-6xl font-bold text-primary tracking-tight mb-6">
+          <p className="text-xs tracking-[0.5em] uppercase text-accent mb-3 font-medium">Connect</p>
+          <h2 className="font-heading text-4xl md:text-5xl font-bold text-primary tracking-tight mb-4">
             Stay in Touch
           </h2>
-          <p className="text-muted-foreground max-w-md mx-auto mb-12">
-            Follow the journey. Be the first to know about new drops, behind-the-scenes content, and exclusive offers.
+          <p className="text-muted-foreground text-sm leading-relaxed mb-12">
+            Follow the journey. Be first to know about new drops, behind-the-scenes content, and exclusive offers.
           </p>
 
-          <div className="flex justify-center gap-8 mb-16">
+          <div className="flex justify-center gap-4 mb-16">
             {[
               { icon: Instagram, label: "Instagram" },
               { icon: Twitter, label: "Twitter" },
@@ -27,19 +28,17 @@ const ContactSection = () => {
               <a
                 key={label}
                 href="#"
-                className="group flex flex-col items-center gap-2"
+                className="group w-12 h-12 rounded-lg glass flex items-center justify-center hover:bg-accent/10 hover:border-accent/50 transition-all duration-300"
+                aria-label={label}
               >
-                <div className="w-14 h-14 border border-border flex items-center justify-center group-hover:border-accent group-hover:bg-accent/10 transition-all duration-300">
-                  <Icon size={20} className="text-muted-foreground group-hover:text-accent transition-colors" />
-                </div>
-                <span className="text-xs tracking-widest uppercase text-muted-foreground">{label}</span>
+                <Icon size={18} className="text-muted-foreground group-hover:text-accent transition-colors" />
               </a>
             ))}
           </div>
 
           <div className="border-t border-border pt-8">
-            <p className="font-heading text-sm tracking-[0.3em] text-muted-foreground">
-              © 2026 BURAK EMRE — ALL RIGHTS RESERVED
+            <p className="font-heading text-xs tracking-[0.4em] text-muted-foreground">
+              © 2026 JANNAT HAYAT — ALL RIGHTS RESERVED
             </p>
           </div>
         </motion.div>
