@@ -83,9 +83,13 @@ const CartDrawer = () => {
                     <span className="text-sm tracking-widest uppercase text-muted-foreground">Total</span>
                     <span className="font-heading text-lg text-primary">${totalPrice}</span>
                   </div>
-                  <button className="w-full py-4 bg-primary text-primary-foreground font-heading text-sm tracking-widest uppercase hover:opacity-90 transition-opacity">
+                  <a
+                    href="/checkout"
+                    onClick={() => setIsOpen(false)}
+                    className="w-full py-4 bg-primary text-primary-foreground font-heading text-sm tracking-widest uppercase hover:opacity-90 transition-opacity block text-center"
+                  >
                     Checkout
-                  </button>
+                  </a>
                 </div>
               )}
             </motion.div>
