@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import CartDrawer from "@/components/CartDrawer";
+import logo from "@/assets/logo.png";
 
 const navLinks = [
   { label: "Home", href: "/#home" },
@@ -19,8 +20,8 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-primary/10">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-        <Link to="/" className="font-heading text-2xl font-bold text-primary">
-          جنّت حیات
+        <Link to="/" className="flex items-center gap-3">
+          <img src={logo} alt="Jannat Hayat" className="h-10 w-auto" />
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
