@@ -1,7 +1,7 @@
-import "@fontsource/space-grotesk/400.css";
-import "@fontsource/space-grotesk/700.css";
-import "@fontsource/inter/400.css";
-import "@fontsource/inter/500.css";
+import "@fontsource/aref-ruqaa/400.css";
+import "@fontsource/aref-ruqaa/700.css";
+import "@fontsource/amiri/400.css";
+import "@fontsource/amiri/700.css";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import ShopSection from "@/components/ShopSection";

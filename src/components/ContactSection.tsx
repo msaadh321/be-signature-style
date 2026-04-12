@@ -11,11 +11,13 @@ const ContactSection = () => {
           viewport={{ once: true }}
           className="text-center max-w-lg mx-auto"
         >
-          <p className="text-xs tracking-[0.5em] uppercase text-accent mb-3 font-medium">Connect</p>
-          <h2 className="font-heading text-4xl md:text-5xl font-bold text-primary tracking-tight mb-4">
+          <p className="text-primary text-2xl font-heading mb-2">✦</p>
+          <p className="text-[10px] tracking-[0.6em] uppercase text-primary/50 mb-4 font-body">Connect</p>
+          <h2 className="font-heading text-4xl md:text-6xl font-bold text-primary tracking-tight mb-4">
             Stay in Touch
           </h2>
-          <p className="text-muted-foreground text-sm leading-relaxed mb-12">
+          <div className="ornament-line max-w-[200px] mx-auto mb-6" />
+          <p className="text-muted-foreground text-sm leading-relaxed mb-12 font-body">
             Follow the journey. Be first to know about new drops, behind-the-scenes content, and exclusive offers.
           </p>
 
@@ -28,19 +30,18 @@ const ContactSection = () => {
               <a
                 key={label}
                 href="#"
-                className="group w-12 h-12 rounded-lg glass flex items-center justify-center hover:bg-accent/10 hover:border-accent/50 transition-all duration-300"
+                className="group w-12 h-12 border border-primary/20 bg-card/60 backdrop-blur-sm flex items-center justify-center hover:bg-primary/10 hover:border-primary/40 transition-all duration-300"
                 aria-label={label}
               >
-                <Icon size={18} className="text-muted-foreground group-hover:text-accent transition-colors" />
+                <Icon size={18} className="text-muted-foreground group-hover:text-primary transition-colors" />
               </a>
             ))}
           </div>
 
-          <div className="border-t border-border pt-8">
-            <p className="font-heading text-xs tracking-[0.4em] text-muted-foreground">
-              © 2026 JANNAT HAYAT — ALL RIGHTS RESERVED
-            </p>
-          </div>
+          <div className="ornament-line mb-8" />
+          <p className="font-heading text-sm text-muted-foreground">
+            © 2026 جنّت حیات — JANNAT HAYAT — ALL RIGHTS RESERVED
+          </p>
         </motion.div>
       </div>
     </section>

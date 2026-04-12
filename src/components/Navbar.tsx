@@ -17,10 +17,10 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 glass">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-primary/10">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-        <Link to="/" className="font-heading text-xl font-bold tracking-[0.35em] text-primary">
-          JH
+        <Link to="/" className="font-heading text-2xl font-bold text-primary">
+          جنّت حیات
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
@@ -28,7 +28,7 @@ const Navbar = () => {
             <a
               key={link.href}
               href={link.href}
-              className="text-[11px] tracking-[0.25em] uppercase text-muted-foreground hover:text-primary transition-colors duration-300"
+              className="text-[11px] tracking-[0.25em] uppercase text-muted-foreground hover:text-primary transition-colors duration-300 font-body"
             >
               {link.label}
             </a>
@@ -58,7 +58,7 @@ const Navbar = () => {
                   key={link.href}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="text-[11px] tracking-[0.25em] uppercase text-muted-foreground hover:text-primary transition-colors"
+                  className="text-[11px] tracking-[0.25em] uppercase text-muted-foreground hover:text-primary transition-colors font-body"
                 >
                   {link.label}
                 </a>
