@@ -25,25 +25,22 @@ const HeroSection = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
         >
-          {/* Arabic-style ornament */}
-          <motion.p
+          {/* Logo */}
+          <motion.img
+            src={logo}
+            alt="Jannat Hayat"
+            className="h-32 md:h-48 lg:h-56 w-auto mx-auto mb-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
-            className="text-primary text-3xl md:text-4xl mb-2 font-heading"
-          >
-            ✦
-          </motion.p>
+          />
 
           <p className="text-[10px] tracking-[0.8em] uppercase text-primary/60 mb-6 font-body">
             Est. 2026 — Premium Streetwear
           </p>
 
-          <h1 className="font-heading text-6xl md:text-8xl lg:text-9xl font-bold text-primary leading-[0.85] mb-4">
-            Jannat
-          </h1>
-          <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl font-bold text-primary/70 leading-[0.85] mb-8">
-            Hayat
+          <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl font-bold text-primary leading-[0.85] mb-4">
+            Jannat Hayat
           </h1>
 
           <div className="ornament-line max-w-xs mx-auto mb-8" />
