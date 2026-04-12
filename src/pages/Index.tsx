@@ -9,16 +9,22 @@ import GallerySection from "@/components/GallerySection";
 import AboutSection from "@/components/AboutSection";
 import LimitedDrops from "@/components/LimitedDrops";
 import ContactSection from "@/components/ContactSection";
+import IslamicDivider from "@/components/IslamicDivider";
 
 const Index = () => {
   return (
     <div className="bg-background min-h-screen">
       <Navbar />
       <HeroSection />
+      <IslamicDivider />
       <ShopSection />
+      <IslamicDivider />
       <GallerySection />
+      <IslamicDivider />
       <AboutSection />
+      <IslamicDivider />
       <LimitedDrops />
+      <IslamicDivider />
       <ContactSection />
     </div>
   );
